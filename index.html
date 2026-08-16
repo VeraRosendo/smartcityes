@@ -193,12 +193,13 @@
     max-width:1100px; margin:0 auto;
     padding:22px 32px 0;
     display:flex; justify-content:space-between; align-items:baseline;
-    flex-wrap:wrap; gap:8px;
+    gap:24px;
   }
-  .vitoria-caption p{font-size:14px; color:var(--text-faint); max-width:560px;}
-  .vitoria-caption span{font-size:13px; color:var(--text-faint);}
+  .vitoria-caption p{font-size:14px; color:var(--text-faint); flex:1; min-width:0;}
+  .vitoria-caption span{font-size:13px; color:var(--text-faint); white-space:nowrap; flex-shrink:0;}
   @media (max-width:640px){
     .vitoria img{height:340px;}
+    .vitoria-caption{flex-direction:column; gap:6px;}
   }
 
   /* ===== PRODUÇÕES ===== */
