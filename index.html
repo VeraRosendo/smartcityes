@@ -77,6 +77,21 @@
     pointer-events:none;
   }
   .hero-inner{max-width:1100px; margin:0 auto; position:relative;}
+  .hero-art{
+    position:absolute;
+    top:50%; right:-60px;
+    transform:translateY(-50%);
+    width:640px;
+    max-width:52vw;
+    opacity:0.55;
+    mix-blend-mode:screen;
+    pointer-events:none;
+    -webkit-mask-image:linear-gradient(to left, black 55%, transparent 100%);
+    mask-image:linear-gradient(to left, black 55%, transparent 100%);
+  }
+  @media (max-width:900px){
+    .hero-art{display:none;}
+  }
   .eyebrow{
     font-size:12px; font-weight:600; letter-spacing:0.14em;
     color:var(--orange); text-transform:uppercase;
@@ -267,9 +282,10 @@
 
 <section class="hero" id="inicio">
   <div class="hero-inner">
+    <img src="hero-network.jpeg" alt="" class="hero-art" aria-hidden="true">
     <p class="eyebrow">Cidades Inteligentes · Espírito Santo</p>
     <h1>Cidades que <em>aprendem</em>, decidem e evoluem.</h1>
-    <p>Produções de alunos sobre cidades inteligentes, com foco no território capixaba.</p>
+    <p>Produções sobre cidades inteligentes, com foco no território capixaba.</p>
     <div class="hero-ctas">
       <a href="#producoes" class="btn btn-primary">Ver produções</a>
       <a href="#sobre" class="btn btn-ghost">Sobre o projeto</a>
