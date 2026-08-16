@@ -182,6 +182,25 @@
     .ciclo-track{flex-direction:column; align-items:flex-start; gap:20px;}
   }
 
+  /* ===== VITÓRIA (imagem clichê) ===== */
+  .vitoria{position:relative;}
+  .vitoria img{
+    width:100%; height:520px;
+    object-fit:cover;
+    display:block;
+  }
+  .vitoria-caption{
+    max-width:1100px; margin:0 auto;
+    padding:22px 32px 0;
+    display:flex; justify-content:space-between; align-items:baseline;
+    flex-wrap:wrap; gap:8px;
+  }
+  .vitoria-caption p{font-size:14px; color:var(--text-faint); max-width:560px;}
+  .vitoria-caption span{font-size:13px; color:var(--text-faint);}
+  @media (max-width:640px){
+    .vitoria img{height:340px;}
+  }
+
   /* ===== PRODUÇÕES ===== */
   .producoes{padding:100px 32px;}
   .producoes-inner{max-width:1100px; margin:0 auto;}
@@ -319,6 +338,14 @@
       <span class="ciclo-arrow">→</span>
       <div class="ciclo-step"><span class="n">06</span><span class="t">Aprender</span></div>
     </div>
+  </div>
+</section>
+
+<section class="vitoria">
+  <img src="vitoria-smartcity.jpeg" alt="Vista aérea noturna de Vitória e da Terceira Ponte, com uma composição gráfica sobreposta simulando painéis de dados de conectividade, mobilidade, segurança e sustentabilidade">
+  <div class="vitoria-caption">
+    <p>A imagem que a maioria espera ver quando pensa em "cidade inteligente". Vitória, ES.</p>
+    <span>Ilustração conceitual</span>
   </div>
 </section>
 
