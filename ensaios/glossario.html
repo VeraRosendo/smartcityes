@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glossário de Cidades Inteligentes · SmartcityES</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0D0E12;
+    --bg-raised:#15171D;
+    --line:#24262E;
+    --orange:#FF5A00;
+    --text:#F4F3F0;
+    --text-dim:#9C9DA5;
+    --text-faint:#5C5D66;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter', sans-serif;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Inter Tight', sans-serif;
+    font-weight:600;
+    letter-spacing:-0.02em;
+  }
+  a{color:inherit;}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--orange); outline-offset:3px;}
+
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(13,14,18,0.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:20px 32px;
+    max-width:760px; margin:0 auto;
+  }
+  .logo{font-family:'Inter Tight', sans-serif; font-weight:700; font-size:18px;}
+  .logo span{color:var(--orange);}
+  .voltar{font-size:14px; color:var(--text-dim); text-decoration:none;}
+  .voltar:hover{color:var(--text);}
+
+  article{
+    max-width:680px;
+    margin:0 auto;
+    padding:80px 32px 120px;
+  }
+  .tag{
+    display:inline-block;
+    font-size:12px; font-weight:600; letter-spacing:0.1em;
+    color:var(--orange); text-transform:uppercase;
+    margin-bottom:20px;
+  }
+  h1.titulo{
+    font-size:clamp(28px, 4.6vw, 38px);
+    line-height:1.2;
+    margin-bottom:16px;
+  }
+  .intro{
+    font-size:15px;
+    color:var(--text-dim);
+    padding-bottom:36px;
+    margin-bottom:44px;
+    border-bottom:1px solid var(--line);
+  }
+
+  .termo{
+    padding:20px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .termo dt{
+    font-family:'Inter Tight', sans-serif;
+    font-weight:600; font-size:16px;
+    color:var(--text);
+    margin-bottom:6px;
+  }
+  .termo dd{
+    font-size:14px; line-height:1.6;
+    color:var(--text-dim);
+  }
+
+  .fonte{
+    margin-top:44px;
+    padding-top:24px;
+    font-size:13px;
+    color:var(--text-faint);
+  }
+  .fonte a{color:var(--orange); text-decoration:none;}
+
+  .rodape-artigo{
+    margin-top:56px;
+    padding-top:28px;
+    border-top:1px solid var(--line);
+  }
+  .rodape-artigo a{
+    font-size:14px; font-weight:600;
+    color:var(--orange);
+    text-decoration:none;
+  }
+
+  footer{padding:40px 32px; border-top:1px solid var(--line);}
+  .footer-inner{
+    max-width:680px; margin:0 auto;
+    display:flex; justify-content:space-between; align-items:center;
+    flex-wrap:wrap; gap:12px;
+    font-size:13px; color:var(--text-faint);
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{scroll-behavior:auto !important;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="../index.html" class="logo">smartcity<span>es</span></a>
+    <a href="../index.html#producoes" class="voltar">← Produções</a>
+  </nav>
+</header>
+
+<article>
+  <span class="tag">Glossário</span>
+  <h1 class="titulo">Glossário de Cidades Inteligentes</h1>
+  <p class="intro">Uma seleção de termos usados com frequência quando se fala em cidades inteligentes e governança urbana, com definições escritas pela equipe do SmartcityES a partir da Carta Brasileira para Cidades Inteligentes.</p>
+
+  <dl>
+    <div class="termo">
+      <dt>Dados abertos</dt>
+      <dd>Dados públicos disponibilizados de forma livre, para que qualquer pessoa possa acessar, usar e redistribuir, sem barreiras técnicas ou de direitos autorais.</dd>
+    </div>
+    <div class="termo">
+      <dt>Governança de dados</dt>
+      <dd>O conjunto de regras e práticas que definem como os dados de uma cidade são coletados, armazenados, protegidos e usados, e por quem.</dd>
+    </div>
+    <div class="termo">
+      <dt>Governança algorítmica</dt>
+      <dd>A forma como se supervisiona o uso de algoritmos em decisões públicas, buscando transparência e responsabilização sobre o que eles decidem e por quê.</dd>
+    </div>
+    <div class="termo">
+      <dt>Governança de baixo para cima</dt>
+      <dd>Modelo de decisão que parte das necessidades e ideias da população, em vez de soluções definidas de cima para baixo pelo poder público.</dd>
+    </div>
+    <div class="termo">
+      <dt>Letramento digital</dt>
+      <dd>A capacidade de usar, compreender e avaliar criticamente as tecnologias digitais no dia a dia, não apenas ter acesso a elas.</dd>
+    </div>
+    <div class="termo">
+      <dt>Inclusão digital</dt>
+      <dd>O processo de ampliar o acesso de toda a população às tecnologias digitais, unindo conexão, dispositivo e letramento digital.</dd>
+    </div>
+    <div class="termo">
+      <dt>Internet das coisas (IoT)</dt>
+      <dd>A rede de objetos do dia a dia (sensores, câmeras, equipamentos urbanos) conectados à internet, capazes de coletar e trocar dados entre si.</dd>
+    </div>
+    <div class="termo">
+      <dt>Inteligência artificial</dt>
+      <dd>Sistemas capazes de aprender a partir de dados e usar esse aprendizado para tomar decisões ou realizar tarefas, com menor intervenção humana direta.</dd>
+    </div>
+    <div class="termo">
+      <dt>Big data</dt>
+      <dd>Conjuntos de dados tão grandes e complexos que exigem ferramentas específicas para serem coletados, armazenados e analisados.</dd>
+    </div>
+    <div class="termo">
+      <dt>LGPD</dt>
+      <dd>A Lei Geral de Proteção de Dados Pessoais, legislação brasileira que regula como dados pessoais podem ser coletados, usados e compartilhados.</dd>
+    </div>
+    <div class="termo">
+      <dt>E-GOV (governo eletrônico)</dt>
+      <dd>O uso de tecnologias digitais para facilitar o acesso a informações e serviços públicos, e ampliar a participação cidadã nas decisões de governo.</dd>
+    </div>
+    <div class="termo">
+      <dt>Interoperabilidade</dt>
+      <dd>A capacidade de diferentes sistemas, públicos ou privados, trocarem informações entre si de forma eficaz e padronizada.</dd>
+    </div>
+    <div class="termo">
+      <dt>Resiliência urbana</dt>
+      <dd>A capacidade de uma cidade se preparar, resistir e se recuperar de choques e crises, sejam climáticos, sociais ou econômicos.</dd>
+    </div>
+    <div class="termo">
+      <dt>Transformação digital sustentável</dt>
+      <dd>A adoção responsável de tecnologias digitais, orientada pela ética, pela proteção de dados e pelo respeito às características de cada território.</dd>
+    </div>
+    <div class="termo">
+      <dt>Ética digital</dt>
+      <dd>A reflexão sobre os impactos das tecnologias digitais na vida das pessoas, e o compromisso de orientar seu uso por princípios éticos, não apenas técnicos.</dd>
+    </div>
+    <div class="termo">
+      <dt>Co-criação</dt>
+      <dd>O desenvolvimento conjunto de projetos e soluções entre poder público, especialistas e população, em vez de um processo fechado e hierárquico.</dd>
+    </div>
+  </dl>
+
+  <p class="fonte">Definições elaboradas pela equipe SmartcityES com base na <a href="https://cartacidadesinteligentes.org.br/carta/parte-4/glossario" target="_blank" rel="noopener">Carta Brasileira para Cidades Inteligentes</a>, que reúne um glossário mais extenso e detalhado sobre o tema.</p>
+
+  <div class="rodape-artigo">
+    <a href="../index.html#producoes">← Voltar para Produções</a>
+  </div>
+</article>
+
+<footer>
+  <div class="footer-inner">
+    <span>smartcityes.com.br</span>
+    <span>Site construído com ajuda do Claude, da Anthropic</span>
+  </div>
+</footer>
+
+</body>
+</html>
