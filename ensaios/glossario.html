@@ -75,18 +75,44 @@
   }
 
   .termo{
-    padding:20px 0;
+    padding:18px 0;
     border-bottom:1px solid var(--line);
+    outline:none;
+    cursor:pointer;
   }
   .termo dt{
     font-family:'Inter Tight', sans-serif;
     font-weight:600; font-size:16px;
     color:var(--text);
-    margin-bottom:6px;
+    display:flex; align-items:center; gap:10px;
+    transition:color 0.15s ease;
+  }
+  .termo dt::after{
+    content:"+";
+    margin-left:auto;
+    color:var(--text-faint);
+    font-size:15px;
+    font-weight:400;
+    transition:transform 0.2s ease;
+  }
+  .termo:hover dt, .termo:focus-within dt{color:var(--orange);}
+  .termo:hover dt::after, .termo:focus-within dt::after{
+    transform:rotate(45deg);
+    color:var(--orange);
   }
   .termo dd{
     font-size:14px; line-height:1.6;
     color:var(--text-dim);
+    max-height:0;
+    opacity:0;
+    overflow:hidden;
+    margin-top:0;
+    transition:max-height 0.3s ease, opacity 0.2s ease, margin-top 0.2s ease;
+  }
+  .termo:hover dd, .termo:focus-within dd{
+    max-height:160px;
+    opacity:1;
+    margin-top:8px;
   }
 
   .fonte{
@@ -136,67 +162,67 @@
   <p class="intro">Uma seleção de termos usados com frequência quando se fala em cidades inteligentes e governança urbana, com definições escritas pela equipe do SmartcityES a partir da Carta Brasileira para Cidades Inteligentes.</p>
 
   <dl>
-    <div class="termo">
+    <div class="termo" tabindex="0">
       <dt>Dados abertos</dt>
       <dd>Dados públicos disponibilizados de forma livre, para que qualquer pessoa possa acessar, usar e redistribuir, sem barreiras técnicas ou de direitos autorais.</dd>
     </div>
-    <div class="termo">
+    <div class="termo" tabindex="0">
       <dt>Governança de dados</dt>
       <dd>O conjunto de regras e práticas que definem como os dados de uma cidade são coletados, armazenados, protegidos e usados, e por quem.</dd>
     </div>
-    <div class="termo">
+    <div class="termo" tabindex="0">
       <dt>Governança algorítmica</dt>
       <dd>A forma como se supervisiona o uso de algoritmos em decisões públicas, buscando transparência e responsabilização sobre o que eles decidem e por quê.</dd>
     </div>
-    <div class="termo">
+    <div class="termo" tabindex="0">
       <dt>Governança de baixo para cima</dt>
       <dd>Modelo de decisão que parte das necessidades e ideias da população, em vez de soluções definidas de cima para baixo pelo poder público.</dd>
     </div>
-    <div class="termo">
+    <div class="termo" tabindex="0">
       <dt>Letramento digital</dt>
       <dd>A capacidade de usar, compreender e avaliar criticamente as tecnologias digitais no dia a dia, não apenas ter acesso a elas.</dd>
     </div>
-    <div class="termo">
+    <div class="termo" tabindex="0">
       <dt>Inclusão digital</dt>
       <dd>O processo de ampliar o acesso de toda a população às tecnologias digitais, unindo conexão, dispositivo e letramento digital.</dd>
     </div>
-    <div class="termo">
+    <div class="termo" tabindex="0">
       <dt>Internet das coisas (IoT)</dt>
       <dd>A rede de objetos do dia a dia (sensores, câmeras, equipamentos urbanos) conectados à internet, capazes de coletar e trocar dados entre si.</dd>
     </div>
-    <div class="termo">
+    <div class="termo" tabindex="0">
       <dt>Inteligência artificial</dt>
       <dd>Sistemas capazes de aprender a partir de dados e usar esse aprendizado para tomar decisões ou realizar tarefas, com menor intervenção humana direta.</dd>
     </div>
-    <div class="termo">
+    <div class="termo" tabindex="0">
       <dt>Big data</dt>
       <dd>Conjuntos de dados tão grandes e complexos que exigem ferramentas específicas para serem coletados, armazenados e analisados.</dd>
     </div>
-    <div class="termo">
+    <div class="termo" tabindex="0">
       <dt>LGPD</dt>
       <dd>A Lei Geral de Proteção de Dados Pessoais, legislação brasileira que regula como dados pessoais podem ser coletados, usados e compartilhados.</dd>
     </div>
-    <div class="termo">
+    <div class="termo" tabindex="0">
       <dt>E-GOV (governo eletrônico)</dt>
       <dd>O uso de tecnologias digitais para facilitar o acesso a informações e serviços públicos, e ampliar a participação cidadã nas decisões de governo.</dd>
     </div>
-    <div class="termo">
+    <div class="termo" tabindex="0">
       <dt>Interoperabilidade</dt>
       <dd>A capacidade de diferentes sistemas, públicos ou privados, trocarem informações entre si de forma eficaz e padronizada.</dd>
     </div>
-    <div class="termo">
+    <div class="termo" tabindex="0">
       <dt>Resiliência urbana</dt>
       <dd>A capacidade de uma cidade se preparar, resistir e se recuperar de choques e crises, sejam climáticos, sociais ou econômicos.</dd>
     </div>
-    <div class="termo">
+    <div class="termo" tabindex="0">
       <dt>Transformação digital sustentável</dt>
       <dd>A adoção responsável de tecnologias digitais, orientada pela ética, pela proteção de dados e pelo respeito às características de cada território.</dd>
     </div>
-    <div class="termo">
+    <div class="termo" tabindex="0">
       <dt>Ética digital</dt>
       <dd>A reflexão sobre os impactos das tecnologias digitais na vida das pessoas, e o compromisso de orientar seu uso por princípios éticos, não apenas técnicos.</dd>
     </div>
-    <div class="termo">
+    <div class="termo" tabindex="0">
       <dt>Co-criação</dt>
       <dd>O desenvolvimento conjunto de projetos e soluções entre poder público, especialistas e população, em vez de um processo fechado e hierárquico.</dd>
     </div>
