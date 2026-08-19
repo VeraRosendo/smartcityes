@@ -107,6 +107,12 @@
   .chips{
     display:flex; gap:9px; justify-content:center; flex-wrap:wrap;
   }
+  .chip-wrap{
+    position:relative;
+    display:inline-block;
+    outline:none;
+    border-radius:20px;
+  }
   .chip{
     font-size:13px;
     padding:7px 14px;
@@ -114,6 +120,7 @@
     border:1px solid transparent;
     animation:chipFloat 3.6s ease-in-out infinite;
     white-space:nowrap;
+    display:inline-block;
   }
   @keyframes chipFloat{
     0%, 100%{ transform:translateY(0); opacity:0.82; }
@@ -124,6 +131,57 @@
   .chip-roxo{background:rgba(150,130,230,0.12); color:#B3A2F2; border-color:rgba(150,130,230,0.3);}
   .chip-laranja{background:rgba(255,90,0,0.1); color:#FF9152; border-color:rgba(255,90,0,0.3);}
   .chip-vermelho{background:rgba(230,90,90,0.12); color:#F19191; border-color:rgba(230,90,90,0.3);}
+
+  .chip-tip{
+    position:absolute;
+    top:calc(100% + 10px);
+    left:50%;
+    transform:translateX(-50%) translateY(-6px);
+    width:230px;
+    background:var(--bg);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:14px 16px;
+    font-size:13px; line-height:1.55;
+    color:var(--text-dim);
+    box-shadow:0 16px 32px rgba(0,0,0,0.45);
+    opacity:0;
+    pointer-events:none;
+    transition:opacity 0.18s ease, transform 0.18s ease;
+    z-index:20;
+    text-align:left;
+    white-space:normal;
+  }
+  .chip-wrap:hover .chip-tip,
+  .chip-wrap:focus-visible .chip-tip,
+  .chip-wrap:focus-within .chip-tip{
+    opacity:1;
+    transform:translateX(-50%) translateY(0);
+    pointer-events:auto;
+  }
+  @media (max-width:600px){
+    .chip-tip{
+      position:static;
+      width:100%;
+      max-width:260px;
+      transform:none;
+      max-height:0;
+      opacity:1;
+      overflow:hidden;
+      padding:0 14px;
+      margin:0 auto;
+      border:none;
+      box-shadow:none;
+      background:transparent;
+      transition:max-height 0.25s ease, padding 0.25s ease;
+    }
+    .chip-wrap:focus-within .chip-tip,
+    .chip-wrap:active .chip-tip{
+      max-height:160px;
+      padding:8px 14px;
+      margin-top:6px;
+    }
+  }
 
   .garantia{
     border-top:1px solid var(--line);
@@ -181,47 +239,47 @@
   <div class="grupo">
     <div class="grupo-label">Aspectos da sustentabilidade</div>
     <div class="chips">
-      <span class="chip chip-verde" style="animation-delay:0s;">Econômico</span>
-      <span class="chip chip-verde" style="animation-delay:0.15s;">Ambiental</span>
-      <span class="chip chip-verde" style="animation-delay:0.3s;">Sociocultural</span>
+      <span class="chip-wrap" tabindex="0"><span class="chip chip-verde" style="animation-delay:0s;">Econômico</span><span class="chip-tip">Geração de valor e oportunidades econômicas de forma responsável, sem comprometer os recursos das próximas gerações.</span></span>
+      <span class="chip-wrap" tabindex="0"><span class="chip chip-verde" style="animation-delay:0.15s;">Ambiental</span><span class="chip-tip">Uso consciente dos recursos naturais e redução dos impactos ambientais causados pelas atividades urbanas.</span></span>
+      <span class="chip-wrap" tabindex="0"><span class="chip chip-verde" style="animation-delay:0.3s;">Sociocultural</span><span class="chip-tip">Respeito à diversidade cultural e fortalecimento dos laços entre as diferentes comunidades da cidade.</span></span>
     </div>
   </div>
 
   <div class="grupo">
     <div class="grupo-label">Como atuam</div>
     <div class="chips">
-      <span class="chip chip-azul" style="animation-delay:0.45s;">Planejada</span>
-      <span class="chip chip-azul" style="animation-delay:0.6s;">Inovadora</span>
-      <span class="chip chip-azul" style="animation-delay:0.75s;">Inclusiva</span>
-      <span class="chip chip-azul" style="animation-delay:0.9s;">Em rede</span>
+      <span class="chip-wrap" tabindex="0"><span class="chip chip-azul" style="animation-delay:0.45s;">Planejada</span><span class="chip-tip">Ações guiadas por planejamento de longo prazo, não por decisões isoladas ou puramente emergenciais.</span></span>
+      <span class="chip-wrap" tabindex="0"><span class="chip chip-azul" style="animation-delay:0.6s;">Inovadora</span><span class="chip-tip">Abertas a novas formas de resolver problemas antigos, testando, avaliando e ajustando soluções.</span></span>
+      <span class="chip-wrap" tabindex="0"><span class="chip chip-azul" style="animation-delay:0.75s;">Inclusiva</span><span class="chip-tip">Garantem que os benefícios do desenvolvimento urbano cheguem a todos os grupos da população, sem exceção.</span></span>
+      <span class="chip-wrap" tabindex="0"><span class="chip chip-azul" style="animation-delay:0.9s;">Em rede</span><span class="chip-tip">Articulam diferentes atores, poder público, sociedade civil e empresas, de forma conectada e coordenada.</span></span>
     </div>
   </div>
 
   <div class="grupo">
     <div class="grupo-label">O que promovem</div>
     <div class="chips">
-      <span class="chip chip-roxo" style="animation-delay:1.05s;">Letramento digital</span>
-      <span class="chip chip-roxo" style="animation-delay:1.2s;">Governança colaborativa</span>
-      <span class="chip chip-roxo" style="animation-delay:1.35s;">Gestão colaborativa</span>
+      <span class="chip-wrap" tabindex="0"><span class="chip chip-roxo" style="animation-delay:1.05s;">Letramento digital</span><span class="chip-tip">Capacidade da população de compreender, usar e questionar as tecnologias digitais presentes no seu dia a dia.</span></span>
+      <span class="chip-wrap" tabindex="0"><span class="chip chip-roxo" style="animation-delay:1.2s;">Governança colaborativa</span><span class="chip-tip">Decisões públicas construídas com a participação de diferentes setores da sociedade, não apenas do governo.</span></span>
+      <span class="chip-wrap" tabindex="0"><span class="chip chip-roxo" style="animation-delay:1.35s;">Gestão colaborativa</span><span class="chip-tip">Administração dos recursos e serviços da cidade com a colaboração ativa da população no dia a dia.</span></span>
     </div>
   </div>
 
   <div class="grupo">
     <div class="grupo-label">Para que usam tecnologia</div>
     <div class="chips">
-      <span class="chip chip-laranja" style="animation-delay:1.5s;">Solucionar problemas</span>
-      <span class="chip chip-laranja" style="animation-delay:1.65s;">Criar oportunidades</span>
-      <span class="chip chip-laranja" style="animation-delay:1.8s;">Eficiência em serviços</span>
-      <span class="chip chip-laranja" style="animation-delay:1.95s;">Reduzir desigualdades</span>
-      <span class="chip chip-laranja" style="animation-delay:2.1s;">Aumentar resiliência</span>
-      <span class="chip chip-laranja" style="animation-delay:2.25s;">Melhorar qualidade de vida</span>
+      <span class="chip-wrap" tabindex="0"><span class="chip chip-laranja" style="animation-delay:1.5s;">Solucionar problemas</span><span class="chip-tip">Aplicar tecnologia para resolver desafios concretos da vida urbana, do trânsito à coleta de lixo.</span></span>
+      <span class="chip-wrap" tabindex="0"><span class="chip chip-laranja" style="animation-delay:1.65s;">Criar oportunidades</span><span class="chip-tip">Abrir novos caminhos econômicos, sociais e educacionais para os cidadãos, e não apenas otimizar o que já existe.</span></span>
+      <span class="chip-wrap" tabindex="0"><span class="chip chip-laranja" style="animation-delay:1.8s;">Eficiência em serviços</span><span class="chip-tip">Tornar os serviços públicos mais rápidos, acessíveis e bem geridos, com menos desperdício de recursos.</span></span>
+      <span class="chip-wrap" tabindex="0"><span class="chip chip-laranja" style="animation-delay:1.95s;">Reduzir desigualdades</span><span class="chip-tip">Direcionar recursos tecnológicos de forma a diminuir, e não ampliar, as disparidades entre grupos e territórios.</span></span>
+      <span class="chip-wrap" tabindex="0"><span class="chip chip-laranja" style="animation-delay:2.1s;">Aumentar resiliência</span><span class="chip-tip">Preparar a cidade para responder melhor a crises, mudanças climáticas e imprevistos.</span></span>
+      <span class="chip-wrap" tabindex="0"><span class="chip chip-laranja" style="animation-delay:2.25s;">Melhorar qualidade de vida</span><span class="chip-tip">Elevar o bem-estar cotidiano de quem vive, trabalha e circula pela cidade, como objetivo final de tudo o mais.</span></span>
     </div>
   </div>
 
   <div class="garantia">
     <div class="grupo-label">Garantia essencial</div>
     <div class="chips">
-      <span class="chip chip-vermelho" style="animation-delay:2.4s;">Uso seguro e responsável de dados e das TIC</span>
+      <span class="chip-wrap" tabindex="0"><span class="chip chip-vermelho" style="animation-delay:2.4s;">Uso seguro e responsável de dados e das TIC</span><span class="chip-tip">Proteção da privacidade e uso ético das tecnologias de informação e comunicação, condição para que tudo o mais funcione.</span></span>
     </div>
   </div>
 
